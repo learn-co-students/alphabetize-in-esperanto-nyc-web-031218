@@ -1,48 +1,40 @@
 require "pry"
 
 
-class Array
-    def swap!(a,b)
-         self[a], self[b] = self[b], self[a]
-    self
-    end
-end
 
-=begin
-def alphabetize(arr)
-  esperanto_alphabet = "abcĉdefgĝhĥijĵklmnoprsŝtuŭvz"
+arr.sort_by { |a| a.split("").map{ |char| ESPERANTO_ALPHABET.index(char) } }
 
-  arr.sort_by{ |string|
 
-    str
-
-  }
-
-end
-=end
-
+input = ["mi amas vin", "bonan matenon", "pacon", "ĉu vi parolas esperanton"]
+[m,i, ,a,m,a,s, ,v,i,n]
+m -> "16"
+[b,o,n,a,n]
+[3,4,3,6]
+[16,5,4,6]
 
 
 def alphabetize(arr)
   # code here
-  esperanto_alphabet = "abcĉdefgĝhĥijĵklmnoprsŝtuŭvz"
-  ref = esperanto_alphabet
+  esperanto = "abcĉdefgĝhĥijĵklmnoprsŝtuŭvz"
 
-  i = 0
-  while i < arr.length
-    #if ref.index("a") > ref.index("b")
-    #puts(ref.index(arr[i][0]) > ref.index(arr[i+1][0]))
-    #binding.pry
+  arr.each{ |string|
 
-    #if ref.index(arr[i][0]) > ref.index(arr[i+1][0])
+    char_array = string.split("")
 
-      #arr.swap!(i,i+1)
-      #binding.pry
+    char_array.map{ |char|
+      binding.pry
 
-    #end
+      char = esperanto.index(char)
 
-    i += 1
-  end#/while
+    }
+
+
+  }
+
+
+
+
+  turn each string to an array of integers of esperanto indices
 
 end
 
